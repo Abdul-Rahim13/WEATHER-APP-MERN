@@ -6,12 +6,14 @@ import UV from "../animation/UV.json";
 
 function Air_Conditons() {
   return (
-    <div className="bg-[#202B3C] rounded-xl p-5 max-w-full md:w-[680px] md:h-[155px] md:ml-10">
-      <h1 className="text-[#6A7583] text-lg font-semibold mb-2">
+    <div className="bg-[#202B3C] rounded-xl p-5 max-w-full w-full md:w-[680px] md:h-auto md:ml-10">
+      <h1 className="text-[#6A7583] text-lg font-semibold mb-4">
         AIR CONDITIONS
       </h1>
 
-      <div className="grid grid-cols-2 gap-2">
+      {/* Keep 2 columns on all screen sizes */}
+      <div className="grid grid-cols-2 gap-x-10 gap-y-4">
+        {/* Left top */}
         <div className="flex items-center gap-4 text-white">
           <Lottie animationData={temperature} loop className="h-5 w-5" />
           <div>
@@ -20,8 +22,8 @@ function Air_Conditons() {
           </div>
         </div>
 
-        {/* First Row - Right */}
-        <div className="flex items-centee gap-4 text-white ml-40">
+        {/* Right top */}
+        <div className="flex items-center gap-4 text-white">
           <Lottie animationData={wind} loop className="h-8 w-8" />
           <div>
             <p className="text-sm text-[#6A7583] font-semibold">Wind</p>
@@ -29,7 +31,7 @@ function Air_Conditons() {
           </div>
         </div>
 
-        {/* Second Row - Left */}
+        {/* Left bottom */}
         <div className="flex items-center gap-4 text-white">
           <Lottie animationData={waterDrop} loop className="h-5 w-5" />
           <div>
@@ -38,8 +40,8 @@ function Air_Conditons() {
           </div>
         </div>
 
-        {/* Second Row - Right */}
-        <div className="flex items-center gap-4 text-white ml-40">
+        {/* Right bottom */}
+        <div className="flex items-center gap-4 text-white">
           <Lottie animationData={UV} loop className="h-8 w-8" />
           <div>
             <p className="text-sm text-[#6A7583] font-semibold">UV Index</p>

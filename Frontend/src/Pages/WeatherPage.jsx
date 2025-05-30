@@ -9,7 +9,6 @@ function WeatherPage() {
     <div className="bg-[#0B121E] min-h-screen flex flex-col md:flex-row md:space-x-4 p-4 md:p-8">
       <div className="flex flex-col flex-1 space-y-4 md:space-y-6">
         <Header />
-        <CurrentTemperature />
         <Hourly_Forecast />
         <Air_Conditons />
       </div>

@@ -1,7 +1,7 @@
 const request = require('request') 
 
 const Geocode = (address, callback) => {
-    const Url = `http://api.weatherapi.com/v1/forecast.json?key=57a243309bdd42d7b8364653252004&q=${address}`
+    const Url = `https://api.weatherbit.io/v2.0/forecast/hourly?city=${encodeURIComponent(city)}&hours=48&key=df931726f6ff426eb74262416155eea7`;
 
     request({url: Url, json:true}, (error, res) => {
         if(error){
