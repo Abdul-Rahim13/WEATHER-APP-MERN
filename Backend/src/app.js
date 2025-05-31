@@ -22,7 +22,8 @@ app.get('/weather', (req, res) => {
 
         res.send({
             city,
-            forecast: forecastData
+            forecast: forecastData,
+            hourly: forecastData.hourlyData
         });
     });
 });

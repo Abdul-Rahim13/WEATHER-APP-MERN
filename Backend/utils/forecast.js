@@ -12,11 +12,16 @@ const Forecast = (city, callback) => {
         }
         else{
             const address = res.body.city_name;
-            const temp = res.body.data[0].temp;
-            const condition = res.body.data[0].weather.description;
-            const pop = res.body.data[0].pop;
+            const hourlyData = res.body.data;
+            const currentData = res.body.data[0];
+            const temp = currentData.temp;
+            const condition = currentData.weather.description;
+            const pop = currentData.pop;
+            const feelTemp = currentData.app_temp;
+            const windSpeed = currentData.wind_spd;
+            const uvIndex = currentData.uv
 
-            callback(undefined, {address,temp,condition,pop});
+            callback(undefined, {address,hourlyData,temp,condition,pop,feelTemp,windSpeed,uvIndex});
         }
     })
 }

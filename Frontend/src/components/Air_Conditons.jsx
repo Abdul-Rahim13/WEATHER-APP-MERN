@@ -4,7 +4,7 @@ import wind from "../animation/wind.json";
 import waterDrop from "../animation/waterDrop.json";
 import UV from "../animation/UV.json";
 
-function Air_Conditons() {
+function Air_Conditons({realFeel,wSpeed,chanceOfRain,uv}) {
   return (
     <div className="bg-[#202B3C] rounded-xl p-5 max-w-full w-full md:w-[680px] md:h-auto md:ml-10">
       <h1 className="text-[#6A7583] text-lg font-semibold mb-4">
@@ -18,7 +18,7 @@ function Air_Conditons() {
           <Lottie animationData={temperature} loop className="h-5 w-5" />
           <div>
             <p className="text-sm text-[#6A7583] font-semibold">Real Feel</p>
-            <p className="text-md font-bold">30°</p>
+            <p className="text-md font-bold">{realFeel}°</p>
           </div>
         </div>
 
@@ -27,7 +27,7 @@ function Air_Conditons() {
           <Lottie animationData={wind} loop className="h-8 w-8" />
           <div>
             <p className="text-sm text-[#6A7583] font-semibold">Wind</p>
-            <p className="text-md font-bold">0.2 Km/h</p>
+            <p className="text-md font-bold">{wSpeed}Km/h</p>
           </div>
         </div>
 
@@ -36,7 +36,7 @@ function Air_Conditons() {
           <Lottie animationData={waterDrop} loop className="h-5 w-5" />
           <div>
             <p className="text-sm text-[#6A7583] font-semibold">Chance of Rain</p>
-            <p className="text-md font-bold">0%</p>
+            <p className="text-md font-bold">{chanceOfRain}%</p>
           </div>
         </div>
 
@@ -45,7 +45,7 @@ function Air_Conditons() {
           <Lottie animationData={UV} loop className="h-8 w-8" />
           <div>
             <p className="text-sm text-[#6A7583] font-semibold">UV Index</p>
-            <p className="text-md font-bold">3</p>
+            <p className="text-md font-bold">{uv}</p>
           </div>
         </div>
       </div>
