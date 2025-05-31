@@ -28,13 +28,4 @@ app.get('/weather', (req, res) => {
     });
 });
 
-
-app.get('*', (req, res) => {
-    res.sendFile(path.join(publicDirectoryPath, 'index.html'));
-  });
-
-app.listen(3000, () => {
-    console.log('Server is Started at Port 3000')
-})
-
 module.exports = app;
