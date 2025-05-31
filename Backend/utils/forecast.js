@@ -1,7 +1,7 @@
 const request = require('request') 
 
 const Forecast = (city, callback) => {
-    const Url = `https://api.weatherbit.io/v2.0/forecast/hourly?city=${encodeURIComponent(city)}&hours=48&key=df931726f6ff426eb74262416155eea7`;
+    const Url = `https://api.weatherbit.io/v2.0/forecast/hourly?city=${encodeURIComponent(city)}&hours=48&key=${process.env.API_KEY}`;
 
     request({url: Url, json:true}, (error, res) => {
         if(error){
