@@ -23,7 +23,7 @@ function WeatherPage() {
     }
 
     try {
-      const response = await axios.get(`http://localhost:3000/weather?address=${city}`)
+      const response = await axios.get(`https://weather-app-mern-beige.vercel.app/weather?address=${city}`)
       setWeather(response.data)
     } catch (error) {
       console.error('Error fetching weather:', error)
